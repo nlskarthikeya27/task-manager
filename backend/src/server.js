@@ -6,7 +6,7 @@ const taskRoutes = require("./routes/taskRoutes");
 const errorHandler = require("./middleware/errorHandler");
 
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000; // very important for Render
 
 // Middleware
 app.use(cors());
@@ -24,6 +24,7 @@ app.use("/api/tasks", taskRoutes);
 // Error handler
 app.use(errorHandler);
 
+// Start server
 app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
