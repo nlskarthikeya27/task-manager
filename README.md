@@ -1,81 +1,92 @@
 # Task Manager – ProU Technology Full-stack Assessment (Track 3)
 
-This is a full-stack **Task Manager** web application built for the  
+This is a full-stack **Task Manager** web application built as part of the  
 **ProU Technology – Track 3 (Full-stack Development)** online assessment.
 
-It includes:
+It demonstrates:
 
-- ✅ Frontend: React (Vite)
-- ✅ Backend: Node.js + Express
-- ✅ Data storage: JSON file used as a simple persistent database
-- ✅ API: RESTful endpoints for managing tasks (CRUD)
+- A clean **React + Vite** frontend
+- A **Node.js + Express** backend
+- Simple persistent storage using a **JSON file** (acts like a small database)
+- Complete CRUD APIs for managing tasks
 
 ---
 
-## Features
+## ✨ Features
 
 - Create tasks with:
   - Title (required)
   - Description (optional)
-  - Priority (low / medium / high)
+  - Priority: `low`, `medium`, `high`
   - Due date (optional)
-- View all tasks in a clean list
-- Change task status:
-  - `pending` → `in_progress` → `completed` → `pending` (cycles)
+- View a list of all tasks with:
+  - Status label
+  - Priority badge
+  - Due date
+- Update task status:
+  - `pending` → `in_progress` → `completed` → `pending` (cycle)
 - Delete tasks
-- Filter tasks by status (All / Pending / In progress / Completed)
+- Filter tasks by status:
+  - All / Pending / In progress / Completed
 - Search tasks by title
-- Responsive, simple UI
+- Responsive UI with a simple, clean layout
 
 ---
 
-## Tech Stack
+## 🧰 Tech Stack
 
 ### Frontend
 
-- React (Vite)
-- JavaScript
-- CSS (custom styling, no UI library)
+- **React** (with Vite)
+- **JavaScript**
+- **CSS** (custom styling)
 
 ### Backend
 
-- Node.js
-- Express
-- CORS, morgan (logging)
-- Simple JSON file (`tasks-data.json`) used to store tasks
+- **Node.js**
+- **Express.js**
+- **CORS**, **morgan** (logging)
+- JSON file used as a lightweight “database”
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 task-manager/
   backend/
     src/
-      server.js
-      db.js
+      server.js           # Express app entry point
+      db.js               # File-based data access helper
       models/
-        taskModel.js
+        taskModel.js      # Task data model
       routes/
-        taskRoutes.js
+        taskRoutes.js     # Task API routes
       middleware/
-        errorHandler.js
+        errorHandler.js   # Centralized error handling
     package.json
-    .env              (optional, for PORT)
-    tasks-data.json   (auto-created when tasks are added)
+    tasks-data.json       # JSON file used as data storage (auto-created)
 
   frontend/
     src/
-      main.jsx
-      App.jsx
-      api.js
-      styles.css
+      main.jsx            # React entry
+      App.jsx             # Main UI
+      api.js              # API client to backend
+      styles.css          # App styles
       components/
-        TaskForm.jsx
-        FilterBar.jsx
-        TaskItem.jsx
-        TaskList.jsx
+        TaskForm.jsx      # Form to create tasks
+        FilterBar.jsx     # Status + search filters
+        TaskItem.jsx      # Single task item UI
+        TaskList.jsx      # List of tasks
     vite.config.js
     package.json
 
-  README.md
+  screenshots/            # UI and terminal screenshots
+    1sc.png
+    2sc.png
+    3sc.png
+    4sc.png
+    5sc.png
+
+  README.md               # This documentation
+  .gitignore
